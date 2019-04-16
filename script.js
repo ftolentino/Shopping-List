@@ -1,6 +1,6 @@
-var button = document.getElementById("enter");
-var input = document.getElementById("userinput");
-var ul = document.getElementById("shopping");
+let button = document.getElementById("enter");
+let input = document.getElementById("userinput");
+let ul = document.getElementById("shopping");
 
 
 function inputLength() {
@@ -8,7 +8,7 @@ function inputLength() {
 }
 
 function createListElement() {
-  var li = document.createElement("li");
+	let li = document.createElement("li");
   li.addEventListener("click", itemDone);
 	li.appendChild(document.createTextNode(input.value));
 	ul.appendChild(li);
@@ -18,8 +18,9 @@ function createListElement() {
     li.classList.toggle("done");
 	}
 	
-	var deleteBtn = document.createElement("button");
+	let deleteBtn = document.createElement("button");
 	deleteBtn.appendChild(document.createTextNode("X"));
+	deleteBtn.classList.add("delBtn");
 	li.appendChild(deleteBtn);
 	deleteBtn.addEventListener("click", deleteItem);
 
